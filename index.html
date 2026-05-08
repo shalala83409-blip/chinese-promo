@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>중국어, 지금 배워야 하는 진짜 이유 | 효자고</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&family=Noto+Serif+KR:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#C62828;--red-light:#EF5350;--gold:#FFB300;--dark:#1A1A1A;--dark2:#2C2C2C;--white:#FFFFFF;--cream:#FFF8F0;--gray:#F5F5F5;--muted:#777;}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--dark);color:var(--white);overflow-x:hidden;}
+.hero{min-height:100vh;background:var(--dark);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 24px 40px;position:relative;overflow:hidden;}
+.hero-bg-char{position:absolute;font-family:'Noto Serif KR',serif;font-weight:900;color:rgba(198,40,40,0.06);line-height:1;pointer-events:none;animation:float 8s ease-in-out infinite;}
+.hbc1{font-size:280px;top:-40px;right:-40px;}
+.hbc2{font-size:160px;bottom:40px;left:-20px;animation-delay:3s;}
+.hbc3{font-size:100px;top:40%;left:10px;animation-delay:5s;color:rgba(255,179,0,0.04);}
+@keyframes float{0%,100%{transform:translateY(0px) rotate(-2deg);}50%{transform:translateY(-18px) rotate(2deg);}}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(198,40,40,0.15);border:1px solid rgba(198,40,40,0.4);color:#EF5350;font-size:10px;font-weight:700;letter-spacing:3px;padding:6px 14px;border-radius:100px;margin-bottom:28px;animation:fadeUp 0.8s ease both;}
+.badge-dot{width:5px;height:5px;background:#EF5350;border-radius:50%;animation:pulse 1.5s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.4;transform:scale(1.5);}}
+.hero-zh{font-family:'Noto Serif KR',serif;font-size:clamp(64px,18vw,96px);font-weight:900;color:var(--red);line-height:1;margin-bottom:8px;animation:fadeUp 0.8s 0.1s ease both;text-shadow:0 0 60px rgba(198,40,40,0.3);}
+.hero-title{font-family:'Noto Serif KR',serif;font-size:clamp(22px,6vw,36px);font-weight:900;color:var(--white);line-height:1.3;margin-bottom:12px;animation:fadeUp 0.8s 0.2s ease both;}
+.hero-title em{color:var(--gold);font-style:normal;}
+.hero-sub{font-size:13px;color:rgba(255,255,255,0.45);letter-spacing:1px;margin-bottom:40px;animation:fadeUp 0.8s 0.3s ease both;}
+.scroll-hint{display:flex;flex-direction:column;align-items:center;gap:6px;animation:fadeUp 0.8s 0.6s ease both;}
+.scroll-hint span{font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:2px;}
+.scroll-arrow{width:20px;height:20px;border-right:2px solid rgba(255,255,255,0.2);border-bottom:2px solid rgba(255,255,255,0.2);transform:rotate(45deg);animation:scrollBounce 1.5s infinite;}
+@keyframes scrollBounce{0%,100%{transform:rotate(45deg) translateY(0);}50%{transform:rotate(45deg) translateY(5px);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.section{padding:64px 20px;position:relative;}
+.section-inner{max-width:480px;margin:0 auto;}
+.sec-eyebrow{display:flex;align-items:center;gap:8px;font-size:9px;font-weight:700;color:var(--red-light);letter-spacing:3px;margin-bottom:14px;}
+.sec-eyebrow::after{content:'';flex:1;height:1px;background:rgba(239,83,80,0.3);}
+.sec-title{font-family:'Noto Serif KR',serif;font-size:clamp(20px,5vw,28px);font-weight:900;line-height:1.35;margin-bottom:16px;}
+.sec-title em{color:var(--gold);font-style:normal;}
+.sec-body{font-size:14.5px;line-height:1.85;color:rgba(255,255,255,0.7);}
+.sec-body strong{color:var(--white);font-weight:700;}
+.sec-body em{color:var(--gold);font-style:normal;}
+.s1{background:var(--dark);}
+.app-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:24px 0;}
+.app-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px;transition:all 0.3s;opacity:0;transform:translateY(16px);}
+.app-card.visible{opacity:1;transform:translateY(0);}
+.app-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
+.app-icon.red{background:rgba(198,40,40,0.15);}
+.app-icon.blue{background:rgba(30,100,200,0.15);}
+.app-icon.green{background:rgba(30,160,80,0.15);}
+.app-icon.pink{background:rgba(220,80,140,0.15);}
+.app-name{font-size:12px;font-weight:700;color:var(--white);margin-bottom:2px;}
+.app-zh{font-family:'Noto Serif KR',serif;font-size:11px;color:var(--gold);}
+.app-tag{font-size:9px;color:rgba(255,255,255,0.35);}
+.shock-callout{background:linear-gradient(135deg,rgba(198,40,40,0.12),rgba(198,40,40,0.04));border-left:3px solid var(--red);border-radius:0 10px 10px 0;padding:16px 18px;margin-top:20px;}
+.shock-callout p{font-size:14px;font-weight:700;color:var(--white);line-height:1.65;}
+.shock-callout p em{color:var(--gold);font-style:normal;}
+.s2{background:var(--red);}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:28px 0;}
+.stat-card{background:rgba(255,255,255,0.12);border-radius:12px;padding:16px 8px;text-align:center;border:1px solid rgba(255,255,255,0.15);}
+.stat-num{font-family:'Noto Serif KR',serif;font-size:26px;font-weight:900;color:var(--gold);line-height:1;margin-bottom:4px;}
+.stat-unit{font-size:12px;font-weight:700;color:var(--gold);}
+.stat-desc{font-size:9px;color:rgba(255,255,255,0.65);line-height:1.5;margin-top:4px;}
+.s3{background:var(--cream);color:var(--dark);}
+.s3 .sec-eyebrow{color:var(--red);}
+.s3 .sec-eyebrow::after{background:rgba(198,40,40,0.2);}
+.s3 .sec-body{color:rgba(26,26,26,0.65);}
+.s3 .sec-body strong{color:var(--dark);}
+.vs-box{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin:24px 0;}
+.vs-side{background:#fff;border-radius:12px;padding:18px 12px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.07);}
+.vs-side.highlight{background:var(--dark);}
+.vs-label{font-size:9px;font-weight:700;letter-spacing:2px;color:var(--muted);margin-bottom:8px;}
+.vs-side.highlight .vs-label{color:rgba(255,255,255,0.45);}
+.vs-keyword{font-family:'Noto Serif KR',serif;font-size:18px;font-weight:900;color:var(--dark);}
+.vs-side.highlight .vs-keyword{color:var(--gold);}
+.vs-desc{font-size:10px;color:var(--muted);margin-top:5px;line-height:1.5;}
+.vs-side.highlight .vs-desc{color:rgba(255,255,255,0.45);}
+.vs-circle{width:36px;height:36px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;color:#fff;flex-shrink:0;}
+.quote-big{background:var(--dark);border-radius:16px;padding:24px 20px;text-align:center;margin-top:20px;}
+.quote-big .q-text{font-family:'Noto Serif KR',serif;font-size:16px;font-weight:900;color:#fff;line-height:1.65;margin-bottom:8px;}
+.quote-big .q-text em{color:var(--gold);font-style:normal;}
+.quote-big .q-src{font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:1px;}
+.s4{background:var(--dark2);}
+.story-cards{display:flex;flex-direction:column;gap:12px;margin-top:24px;}
+.story-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:18px;display:flex;gap:16px;align-items:flex-start;opacity:0;transform:translateX(-20px);transition:all 0.5s ease;}
+.story-card.visible{opacity:1;transform:translateX(0);}
+.story-card-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;background:rgba(198,40,40,0.12);}
+.story-card-title{font-size:13px;font-weight:900;color:#fff;margin-bottom:5px;}
+.story-card-title em{color:var(--gold);font-style:normal;}
+.story-card-body{font-size:12px;color:rgba(255,255,255,0.55);line-height:1.65;}
+.s5{background:var(--gold);color:var(--dark);}
+.s5 .sec-eyebrow{color:var(--red);}
+.s5 .sec-eyebrow::after{background:rgba(198,40,40,0.3);}
+.ai-bubble{background:var(--dark);border-radius:16px 16px 16px 4px;padding:16px 18px;margin:20px 0 12px;}
+.ai-bubble p{font-size:14px;color:rgba(255,255,255,0.8);line-height:1.6;}
+.ai-bubble p strong{color:#fff;}
+.ai-reply{background:var(--red);border-radius:16px 16px 4px 16px;padding:16px 18px;margin-left:20px;}
+.ai-reply p{font-size:14px;color:#fff;line-height:1.6;font-weight:700;}
+.ai-reply p em{color:var(--gold);font-style:normal;}
+.s6{background:var(--dark);}
+.career-list{display:flex;flex-direction:column;gap:10px;margin-top:24px;}
+.career-item{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:16px;display:flex;align-items:center;gap:14px;opacity:0;transform:translateY(12px);transition:all 0.4s ease;}
+.career-item.visible{opacity:1;transform:translateY(0);}
+.career-num{width:32px;height:32px;background:var(--red);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif KR',serif;font-size:14px;font-weight:900;color:#fff;flex-shrink:0;}
+.career-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:3px;}
+.career-desc{font-size:11px;color:rgba(255,255,255,0.45);line-height:1.5;}
+.s7{background:linear-gradient(160deg,#B71C1C 0%,#D32F2F 50%,#C62828 100%);position:relative;overflow:hidden;}
+.s7::before{content:'2050';position:absolute;font-family:'Noto Serif KR',serif;font-weight:900;font-size:120px;color:rgba(255,255,255,0.05);right:-10px;top:50%;transform:translateY(-50%);pointer-events:none;}
+.future-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:24px 0;}
+.future-card{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:16px 14px;text-align:center;}
+.future-card-icon{font-size:28px;margin-bottom:8px;}
+.future-card-title{font-size:11px;font-weight:700;color:var(--gold);margin-bottom:4px;}
+.future-card-body{font-size:10px;color:rgba(255,255,255,0.6);line-height:1.55;}
+.closing{background:var(--dark);padding:64px 20px;text-align:center;position:relative;overflow:hidden;}
+.closing::before{content:'"';position:absolute;font-family:serif;font-size:300px;color:rgba(198,40,40,0.04);top:-60px;left:-20px;line-height:1;}
+.closing-inner{max-width:400px;margin:0 auto;position:relative;z-index:2;}
+.closing-main{font-family:'Noto Serif KR',serif;font-size:clamp(20px,5.5vw,30px);font-weight:900;line-height:1.6;color:#fff;margin-bottom:12px;}
+.closing-main em{color:var(--gold);font-style:normal;}
+.closing-sub{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;margin-bottom:36px;}
+.event-card{background:#fff;border-radius:16px;padding:22px 20px;margin:0 20px 48px;border:2px solid var(--dark);box-shadow:4px 4px 0 var(--dark);text-align:center;color:var(--dark);}
+.event-card-badge{display:inline-block;background:var(--gold);font-size:9px;font-weight:700;letter-spacing:2px;padding:4px 12px;border-radius:100px;color:var(--dark);margin-bottom:12px;}
+.event-card-title{font-family:'Noto Serif KR',serif;font-size:20px;font-weight:900;color:var(--dark);margin-bottom:6px;}
+.event-card-date{font-family:'Noto Serif KR',serif;font-size:42px;font-weight:900;color:var(--red);line-height:1;margin:10px 0 4px;}
+.event-card-month{font-size:12px;color:var(--muted);letter-spacing:1px;}
+.event-card-tags{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-top:14px;}
+.event-tag{background:var(--gray);font-size:11px;font-weight:700;color:var(--dark);padding:5px 12px;border-radius:100px;}
+.footer{background:#111;padding:20px;text-align:center;}
+.footer p{font-size:10px;color:rgba(255,255,255,0.25);letter-spacing:1px;}
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--red),var(--gold));z-index:100;transition:width 0.1s;border-radius:0 2px 2px 0;}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+<div class="progress-bar" id="progress"></div>
+
+<section class="hero">
+  <div class="hero-bg-char hbc1">语</div>
+  <div class="hero-bg-char hbc2">未</div>
+  <div class="hero-bg-char hbc3">来</div>
+  <div class="hero-badge"><div class="badge-dot"></div>효자고등학교 중국어 홍보</div>
+  <div class="hero-zh">中國語</div>
+  <div class="hero-title">선택이 아닌,<br><em>필수다.</em></div>
+  <div class="hero-sub">이미 너의 일상 깊숙이 들어와 있는 언어</div>
+  <svg width="200" height="140" viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:8px 0 32px;opacity:0.85;animation:fadeUp 0.8s 0.4s ease both;">
+    <rect x="60" y="10" width="80" height="120" rx="14" fill="#2C2C2C" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <rect x="68" y="24" width="64" height="90" rx="6" fill="#1A1A1A"/>
+    <rect x="72" y="28" width="26" height="26" rx="6" fill="rgba(198,40,40,0.3)"/>
+    <text x="85" y="45" text-anchor="middle" font-size="12" fill="#EF5350">♪</text>
+    <rect x="102" y="28" width="26" height="26" rx="6" fill="rgba(30,120,200,0.25)"/>
+    <text x="115" y="45" text-anchor="middle" font-size="11" fill="#64B5F6">웨</text>
+    <rect x="72" y="58" width="26" height="26" rx="6" fill="rgba(30,160,80,0.25)"/>
+    <text x="85" y="75" text-anchor="middle" font-size="11" fill="#81C784">테</text>
+    <rect x="102" y="58" width="26" height="26" rx="6" fill="rgba(240,60,120,0.25)"/>
+    <text x="115" y="75" text-anchor="middle" font-size="11" fill="#F48FB1">샤</text>
+    <rect x="87" y="106" width="26" height="3" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="0" y="20" width="52" height="20" rx="6" fill="rgba(198,40,40,0.15)" stroke="rgba(198,40,40,0.3)" stroke-width="1"/>
+    <text x="26" y="34" text-anchor="middle" font-size="9" fill="#EF5350" font-family="sans-serif">중국 회사</text>
+    <line x1="52" y1="30" x2="68" y2="37" stroke="rgba(198,40,40,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+    <rect x="148" y="55" width="52" height="20" rx="6" fill="rgba(255,179,0,0.15)" stroke="rgba(255,179,0,0.3)" stroke-width="1"/>
+    <text x="174" y="69" text-anchor="middle" font-size="9" fill="#FFB300" font-family="sans-serif">매일 사용!</text>
+    <line x1="148" y1="65" x2="132" y2="65" stroke="rgba(255,179,0,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+  </svg>
+  <div class="scroll-hint"><span>SCROLL</span><div class="scroll-arrow"></div></div>
+</section>
+
+<section class="section s1">
+  <div class="section-inner">
+    <div class="sec-eyebrow">QUESTION</div>
+    <h2 class="sec-title reveal">오늘 아침,<br>뭐 했어요?</h2>
+    <p class="sec-body reveal">혹시 모르고 있었나요? 여러분이 매일 쓰는 것들,<br><strong>전부 중국과 연결되어 있어요.</strong></p>
+    <div class="app-cards">
+      <div class="app-card" style="transition-delay:0.0s"><div class="app-icon red">📱</div><div><div class="app-name">틱톡</div><div class="app-zh">抖音 Dǒuyīn</div><div class="app-tag">바이트댄스 (중국)</div></div></div>
+      <div class="app-card" style="transition-delay:0.1s"><div class="app-icon blue">🛍</div><div><div class="app-name">테무</div><div class="app-zh">拼多多 Pīnduōduō</div><div class="app-tag">핀둬둬 (중국)</div></div></div>
+      <div class="app-card" style="transition-delay:0.2s"><div class="app-icon green">🎮</div><div><div class="app-name">배그 · 롤</div><div class="app-zh">腾讯 Téngxùn</div><div class="app-tag">텐센트 (중국)</div></div></div>
+      <div class="app-card" style="transition-delay:0.3s"><div class="app-icon pink">🧸</div><div><div class="app-name">라부부</div><div class="app-zh">泡泡玛特 Pàomǎtè</div><div class="app-tag">팝마트 (중국)</div></div></div>
+    </div>
+    <div class="shock-callout reveal"><p>이미 하루에 중국 기업 제품을 <strong>서너 번씩</strong> 쓰고 있어요.<br>그런데 정작 <em>중국어는 남 얘기라고 생각했나요?</em></p></div>
+  </div>
+</section>
+
+<section class="section s2">
+  <div class="section-inner">
+    <div class="sec-eyebrow" style="color:rgba(255,255,255,0.6);">NUMBERS</div>
+    <h2 class="sec-title reveal">숫자로 보는<br>중국어의 무게</h2>
+    <div class="stat-grid">
+      <div class="stat-card reveal" style="transition-delay:0.1s"><div class="stat-num">14<span class="stat-unit">억</span></div><div class="stat-desc">전 세계 중국어<br>사용 인구 1위</div></div>
+      <div class="stat-card reveal" style="transition-delay:0.2s"><div class="stat-num">20<span class="stat-unit">%</span></div><div class="stat-desc">한국 수출의<br>중국 비중 1위</div></div>
+      <div class="stat-card reveal" style="transition-delay:0.3s"><div class="stat-num">#1</div><div class="stat-desc">2050년 예상<br>세계 경제 1위</div></div>
+    </div>
+    <p class="sec-body reveal">삼성이, 현대가, LG가 먹고 사는 곳이 바로 중국이에요.<br><strong>이 시장에서 일하려면 중국어가 필수예요.</strong></p>
+  </div>
+</section>
+
+<section class="section s3">
+  <div class="section-inner">
+    <div class="sec-eyebrow">REALITY CHECK</div>
+    <h2 class="sec-title reveal" style="color:var(--dark);">영어만으로는<br><em>부족하다</em></h2>
+    <div class="vs-box reveal">
+      <div class="vs-side"><div class="vs-label">ENGLISH</div><div class="vs-keyword">기본</div><div class="vs-desc">넘쳐나는<br>경쟁자들</div></div>
+      <div class="vs-circle">VS</div>
+      <div class="vs-side highlight"><div class="vs-label">CHINESE</div><div class="vs-keyword">무기</div><div class="vs-desc" style="color:rgba(255,255,255,0.4);">희소하고<br>강력한 스펙</div></div>
+    </div>
+    <div class="quote-big reveal">
+      <div class="q-text">영어 잘하는 사람은 넘쳐난다.<br><em>중국어 + 영어, 둘 다 되는 사람은 귀하다.</em></div>
+      <div class="q-src">— 대기업 채용 담당자 공통 인터뷰</div>
+    </div>
+  </div>
+</section>
+
+<section class="section s4">
+  <div class="section-inner">
+    <div class="sec-eyebrow">REAL LIFE</div>
+    <h2 class="sec-title reveal">지금 당장 체감되는<br><em>중국어의 힘</em></h2>
+    <div class="story-cards">
+      <div class="story-card" style="transition-delay:0.0s"><div class="story-card-icon">🧋</div><div><div class="story-card-title">명동 알바도 <em>시급이 다르다</em></div><div class="story-card-body">한국 외래 관광객 부동의 1위는 중국인이에요. 편의점, 카페, 면세점 어디서든 중국어 한마디면 즉시 가산점이에요.</div></div></div>
+      <div class="story-card" style="transition-delay:0.15s"><div class="story-card-icon">🎤</div><div><div class="story-card-title">아이돌도 <em>중국 팬한테 중국어 한다</em></div><div class="story-card-body">K-POP 최대 팬덤은 중국이에요. BTS, 블랙핑크, 뉴진스 모두 중국 팬을 위한 중국어 멘트를 따로 준비해요.</div></div></div>
+      <div class="story-card" style="transition-delay:0.3s"><div class="story-card-icon">📄</div><div><div class="story-card-title">HSK 한 장이 <em>수백 명을 제친다</em></div><div class="story-card-body">HSK 5·6급은 대기업 공채 가산점, 국제학부·무역학과 진학 시 핵심 스펙이에요.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section s5">
+  <div class="section-inner">
+    <div class="sec-eyebrow">COMMON QUESTION</div>
+    <h2 class="sec-title reveal" style="color:var(--dark);">"AI가 다 해주면<br>되잖아요?"</h2>
+    <div class="ai-bubble reveal"><p>🤖 <strong>"요즘 AI 번역이 얼마나 좋은데요.<br>굳이 중국어를 배울 필요가 있나요?"</strong></p></div>
+    <div class="ai-reply reveal"><p>협상 테이블에서 통역기를 켜는 순간,<br><em>이미 신뢰를 잃어요.</em><br>계약서 도장은 언어가 통하는 사람이 먼저 찍어요.</p></div>
+    <p class="sec-body reveal" style="color:rgba(26,26,26,0.6);margin-top:16px;"><strong style="color:var(--dark);">언어는 단순한 소통 도구가 아니에요.</strong> 신뢰를 쌓는 가장 강력한 수단이에요.</p>
+  </div>
+</section>
+
+<section class="section s6">
+  <div class="section-inner">
+    <div class="sec-eyebrow">CAREER</div>
+    <h2 class="sec-title reveal">중국어가 열어주는<br><em>새로운 직업들</em></h2>
+    <div class="career-list">
+      <div class="career-item" style="transition-delay:0.05s"><div class="career-num">一</div><div><div class="career-title">K-콘텐츠 비즈니스 담당자</div><div class="career-desc">아이치이·텐센트 플랫폼 계약·협상 · 한류 콘텐츠 중국 유통</div></div></div>
+      <div class="career-item" style="transition-delay:0.1s"><div class="career-num">二</div><div><div class="career-title">왕홍 마케터 · 라이브커머스 MC</div><div class="career-desc">샤오홍수·타오바오 마케팅 · 중국 SNS 인플루언서 기획</div></div></div>
+      <div class="career-item" style="transition-delay:0.15s"><div class="career-num">三</div><div><div class="career-title">K-뷰티 현지 MD</div><div class="career-desc">중국 화장품·뷰티 시장 바이어 · 제품 기획 및 현지화</div></div></div>
+      <div class="career-item" style="transition-delay:0.2s"><div class="career-num">四</div><div><div class="career-title">국제학부·무역학과 진학</div><div class="career-desc">HSK 5·6급 = 핵심 입시 스펙 · 대기업 공채 외국어 가산점</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section s7">
+  <div class="section-inner">
+    <div class="sec-eyebrow" style="color:rgba(255,255,255,0.5);">THE FUTURE</div>
+    <h2 class="sec-title reveal">세계는 지금<br><em>두 언어로 나뉜다</em></h2>
+    <div class="future-cards">
+      <div class="future-card reveal" style="transition-delay:0.1s"><div class="future-card-icon">🌏</div><div class="future-card-title">영어권</div><div class="future-card-body">이미 모두가<br>준비하는 세계</div></div>
+      <div class="future-card reveal" style="transition-delay:0.2s;border:1px solid var(--gold);"><div class="future-card-icon">🇨🇳</div><div class="future-card-title" style="color:#fff;">중국어권</div><div class="future-card-body" style="color:rgba(255,255,255,0.7);">준비한 사람만<br>들어갈 수 있는 세계</div></div>
+    </div>
+    <div class="shock-callout reveal" style="background:rgba(0,0,0,0.2);border-left-color:var(--gold);"><p style="color:#fff;">지구 인구의 <strong style="color:var(--gold);">5명 중 1명</strong>이 쓰는 언어.<br>모르는 게 더 이상한 거 아닐까요?</p></div>
+  </div>
+</section>
+
+<!-- ★ NEW: 효자고 중국어만의 특별함 -->
+<section class="section" style="background:#FFF8F0;color:#1A1A1A;">
+  <div class="section-inner">
+    <div class="sec-eyebrow" style="color:#C62828;">ONLY AT 효자고</div>
+    <h2 class="sec-title reveal" style="color:#1A1A1A;">고등학생이라면<br><em style="color:#C62828;">제일 궁금한 것</em></h2>
+
+    <!-- 수행평가 100% -->
+    <div class="reveal" style="background:#C62828;border-radius:16px;padding:28px 22px;text-align:center;margin-bottom:12px;position:relative;overflow:hidden;">
+      <div style="position:absolute;font-size:120px;font-weight:900;color:rgba(255,255,255,0.05);top:-20px;right:-10px;line-height:1;font-family:'Noto Serif KR',serif;">100</div>
+      <div style="display:inline-block;background:rgba(255,255,255,0.15);font-size:9px;font-weight:700;letter-spacing:3px;padding:4px 12px;border-radius:100px;color:#fff;margin-bottom:14px;">💡 효자고 중국어 수업 방식</div>
+      <div style="font-family:'Noto Serif KR',serif;font-size:38px;font-weight:900;color:#FFD700;line-height:1;margin-bottom:6px;">수행평가 <span style="font-size:50px;">100%</span></div>
+      <div style="font-size:15px;font-weight:900;color:#fff;margin-bottom:10px;">정기시험? 걱정하지 않아도 돼요!</div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.75);line-height:1.7;">중간·기말 시험 부담 없이<br>수행평가만으로 성적이 나와요.<br><strong style="color:#FFD700;">시험 스트레스 제로, 실력은 UP!</strong></div>
+    </div>
+
+    <!-- 혜택 3가지 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px;">
+      <div class="reveal" style="background:#fff;border-radius:12px;padding:14px 10px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.07);border-bottom:3px solid #C62828;transition-delay:0.1s;">
+        <div style="font-size:26px;margin-bottom:6px;">😌</div>
+        <div style="font-size:11px;font-weight:900;color:#1A1A1A;margin-bottom:3px;">시험 부담 없음</div>
+        <div style="font-size:9px;color:#888;line-height:1.5;">정기고사 범위에<br>중국어 없어요</div>
+      </div>
+      <div class="reveal" style="background:#fff;border-radius:12px;padding:14px 10px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.07);border-bottom:3px solid #FFB300;transition-delay:0.2s;">
+        <div style="font-size:26px;margin-bottom:6px;">🎭</div>
+        <div style="font-size:11px;font-weight:900;color:#1A1A1A;margin-bottom:3px;">활동형 수업</div>
+        <div style="font-size:9px;color:#888;line-height:1.5;">발표·체험 중심<br>재미있는 수업</div>
+      </div>
+      <div class="reveal" style="background:#fff;border-radius:12px;padding:14px 10px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.07);border-bottom:3px solid #1A1A1A;transition-delay:0.3s;">
+        <div style="font-size:26px;margin-bottom:6px;">📝</div>
+        <div style="font-size:11px;font-weight:900;color:#1A1A1A;margin-bottom:3px;">생기부 기록</div>
+        <div style="font-size:9px;color:#888;line-height:1.5;">세특에 남는<br>차별화된 스펙</div>
+      </div>
+    </div>
+
+    <!-- 문화 수업 -->
+    <div class="reveal" style="background:#1A1A1A;border-radius:14px;padding:20px 18px;margin-bottom:12px;">
+      <div style="font-size:9px;font-weight:700;color:#FFB300;letter-spacing:3px;margin-bottom:12px;">🎨 이런 수업을 해요</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;background:rgba(198,40,40,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🧋</div>
+          <div><div style="font-size:12px;font-weight:700;color:#fff;">버블티 중국어로 주문하기</div><div style="font-size:10px;color:rgba(255,255,255,0.45);">실생활 회화 + 중국 카페 문화 체험</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;background:rgba(255,179,0,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🎬</div>
+          <div><div style="font-size:12px;font-weight:700;color:#fff;">중국 드라마·영화로 배우는 중국어</div><div style="font-size:10px;color:rgba(255,255,255,0.45);">선협극·현대극 속 실제 표현 학습</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;background:rgba(100,180,100,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">📸</div>
+          <div><div style="font-size:12px;font-weight:700;color:#fff;">중국 문화 체험 & 포토존</div><div style="font-size:10px;color:rgba(255,255,255,0.45);">의상 체험, 음식 탐구, 전통 놀이</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;background:rgba(100,150,220,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🀄</div>
+          <div><div style="font-size:12px;font-weight:700;color:#fff;">중국어 퀴즈 & 게임 수업</div><div style="font-size:10px;color:rgba(255,255,255,0.45);">딱딱한 암기 대신 게임으로 익히는 어휘</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 나는 어떤 경우일까 -->
+    <div style="font-size:9px;font-weight:700;color:#C62828;letter-spacing:3px;margin-bottom:8px;display:flex;align-items:center;gap:6px;">나는 어떤 경우일까?<span style="flex:1;height:1px;background:rgba(198,40,40,0.2);display:block;"></span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
+      <div class="reveal" style="background:#fff;border-radius:12px;padding:16px 14px;border:2px solid #FFB300;box-shadow:0 2px 8px rgba(0,0,0,0.07);transition-delay:0.1s;">
+        <div style="font-size:9px;font-weight:700;color:#888;margin-bottom:8px;">✅ 중학교때 배웠어요</div>
+        <div style="font-size:13px;font-weight:900;color:#1A1A1A;line-height:1.4;margin-bottom:8px;">이미 아는 게 있으니<br><span style="color:#C62828;">더 쉽고, 더 재밌어요!</span></div>
+        <div style="font-size:10px;color:#666;line-height:1.65;">발음·성조를 이미 알면<br>고등 수준 표현이 술술!<br><strong style="color:#C62828;">자신감이 생기는 수업</strong>이에요.</div>
+        <div style="margin-top:10px;background:#FFF8F0;border-radius:8px;padding:8px 10px;">
+          <div style="font-size:9px;color:#C62828;font-weight:700;">👍 이런 친구에게 추천</div>
+          <div style="font-size:9px;color:#888;margin-top:2px;line-height:1.5;">중학교 중국어가 재밌었던 친구<br>HSK에 도전하고 싶은 친구</div>
+        </div>
+      </div>
+      <div class="reveal" style="background:#fff;border-radius:12px;padding:16px 14px;border:2px solid #C62828;box-shadow:0 2px 8px rgba(0,0,0,0.07);transition-delay:0.2s;">
+        <div style="font-size:9px;font-weight:700;color:#888;margin-bottom:8px;">🆕 처음 배우는 거예요</div>
+        <div style="font-size:13px;font-weight:900;color:#1A1A1A;line-height:1.4;margin-bottom:8px;">기초부터 탄탄하게<br><span style="color:#C62828;">경쟁력을 키워요!</span></div>
+        <div style="font-size:10px;color:#666;line-height:1.65;">처음이라 걱정? No!<br>발음부터 차근차근<br><strong style="color:#C62828;">기초 완성 수업</strong>이에요.</div>
+        <div style="margin-top:10px;background:#FFF0F0;border-radius:8px;padding:8px 10px;">
+          <div style="font-size:9px;color:#C62828;font-weight:700;">👍 이런 친구에게 추천</div>
+          <div style="font-size:9px;color:#888;margin-top:2px;line-height:1.5;">남들과 다른 스펙 원하는 친구<br>K-POP·중국 문화 좋아하는 친구</div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal" style="background:#1A1A1A;border-radius:10px;padding:14px 16px;text-align:center;">
+      <p style="font-size:14px;font-weight:900;color:#FFD700;line-height:1.6;">배운 적 있어도, 처음이어도<br><span style="color:#fff;">효자고 중국어는 누구에게나 열려 있어요.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="closing-inner">
+    <div class="closing-main reveal">배워서 남 주냐고요?<br><em>이건 배워서 내가 쓴다.</em></div>
+    <p class="closing-sub reveal">중국어를 배운 후회는 없어요.<br>배우지 않은 후회는 반드시 와요.<br>지금 이 선택이 여러분의 미래를 바꿔요.</p>
+  </div>
+  <div class="event-card reveal">
+    <div class="event-card-badge">🀄 COMING SOON</div>
+    <div class="event-card-title">중국 문화 체험전</div>
+    <div class="event-card-month">2026년 5월</div>
+    <div class="event-card-date">13</div>
+    <div class="event-card-month">수요일</div>
+    <div class="event-card-tags">
+      <span class="event-tag">📸 포토존</span>
+      <span class="event-tag">🧋 버블티 카페</span>
+      <span class="event-tag">🎯 퀴즈 이벤트</span>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>효자고등학교 중국어부 · 2026 문화체험전</p>
+  <p style="margin-top:4px;">#중국어는_필수 &nbsp; #나의_미래언어</p>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  const total=document.body.scrollHeight-window.innerHeight;
+  document.getElementById('progress').style.width=(window.scrollY/total*100)+'%';
+});
+const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal,.app-card,.story-card,.career-item').forEach(el=>obs.observe(el));
+document.querySelectorAll('.app-card').forEach((c,i)=>{c.style.transitionDelay=(i*0.1)+'s';c.style.transition='opacity 0.5s ease,transform 0.5s ease';});
+document.querySelectorAll('.story-card').forEach((c,i)=>{c.style.transitionDelay=(i*0.15)+'s';});
+document.querySelectorAll('.career-item').forEach((c,i)=>{c.style.transitionDelay=(i*0.08)+'s';c.style.transition='opacity 0.4s ease,transform 0.4s ease';});
+</script>
+</body>
+</html>
